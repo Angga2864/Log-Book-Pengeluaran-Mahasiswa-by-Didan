@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log Book Pengeluaran Bulanan Mahasiswa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Log Book Pengeluaran Bulanan Mahasiswa</h1>
+      <p>Website ini dikelola dan didesain oleh Didan Arisdya A P</p>
+      <div id="currentTime" class="time"></div>
+
+      <form id="expenseForm" class="expense-form">
+        <label for="expenseType">Jenis Pengeluaran:</label>
+        <input type="text" id="expenseType" required />
+
+        <label for="expenseAmount">Nominal Uang yang Dikeluarkan:</label>
+        <input type="number" id="expenseAmount" required />
+
+        <label for="expenseNote">Keterangan:</label>
+        <textarea id="expenseNote" rows="3" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <table class="expense-table">
+        <thead>
+          <tr>
+            <th>Waktu/Timestamp</th>
+            <th>Jenis Pengeluaran</th>
+            <th>Nominal Uang yang Dikeluarkan</th>
+            <th>Keterangan</th>
+            <th>Total Pengeluaran</th>
+            <th>Aksi</th> <!-- Kolom untuk tombol Delete -->
+            <!-- Tambahkan kolom baru -->
+          </tr>
+        </thead>
+        <tbody id="expenseTableBody">
+          <!-- Data akan ditambahkan secara dinamis di sini -->
+        </tbody>
+      </table>
+
+      <button id="printReceipt" class="print-button">Cetak Struk & Kirim WhatsApp</button>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

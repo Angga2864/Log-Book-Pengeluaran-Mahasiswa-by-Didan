@@ -1,0 +1,162 @@
+body {
+  font-family: "Poppins", sans-serif; /* Mengganti font menjadi Poppins */
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Mengubah height menjadi min-height untuk responsivitas */
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  margin: 20px; /* Menambahkan margin agar tidak menempel ke tepi layar */
+}
+
+h1 {
+  color: #4a90e2;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem; /* Ukuran font lebih fleksibel */
+}
+
+p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #4a90e2;
+}
+
+.time {
+  text-align: center;
+  color: #777;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.expense-form label {
+  font-weight: bold;
+}
+
+.expense-form input,
+.expense-form textarea {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%; /* Memastikan input menyesuaikan dengan lebar */
+  box-sizing: border-box; /* Memastikan padding dihitung dalam width */
+}
+
+.expense-form button {
+  background-color: #f39c12;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.expense-form button:hover {
+  background-color: #e67e22;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  overflow-x: auto; /* Tambahkan overflow agar tabel bisa di-scroll jika terlalu lebar */
+  display: block; /* Mengubah tabel menjadi block untuk menghindari keluar dari container */
+}
+
+.expense-table th,
+.expense-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap; /* Membuat teks tidak terpotong */
+}
+
+.expense-table th {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.total-expense {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px; /* Menambahkan margin atas agar lebih rapi */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px; /* Mengurangi padding untuk perangkat kecil */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Mengurangi ukuran font judul pada perangkat kecil */
+  }
+
+  .expense-form input,
+  .expense-form textarea {
+    font-size: 0.9rem; /* Mengurangi ukuran font input pada perangkat kecil */
+  }
+
+  .expense-table {
+    font-size: 0.9rem; /* Mengurangi ukuran font tabel pada perangkat kecil */
+  }
+
+  .total-expense {
+    text-align: center; /* Mengatur total pengeluaran agar center di layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3rem; /* Mengurangi lebih lanjut ukuran font judul untuk layar yang sangat kecil */
+  }
+
+  .expense-table {
+    font-size: 0.8rem; /* Ukuran font lebih kecil untuk layar yang lebih kecil */
+  }
+}
+
+.print-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  display: block;
+}
+
+.print-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #e74c3c; /* Warna merah */
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c0392b; /* Warna merah lebih gelap saat hover */
+}
